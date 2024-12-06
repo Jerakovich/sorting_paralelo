@@ -7,6 +7,9 @@
 #include <thrust/sort.h>
 #include <thrust/device_vector.h>
 #include <random>
+#include <iostream>
+
+using namespace std;
 
 #define CUDA_CHECK(err) if (err != cudaSuccess) { \
     std::cerr << "CUDA error: " << cudaGetErrorString(err) << std::endl; \
@@ -62,7 +65,7 @@ void sort_cpu(std::vector<int>& array, int num_threads) {
     merge_sort_parallel(array, 0, array.size() - 1, omp_get_max_active_levels());
 }
 
-// Ordenamiento en GPU usando Thrust
+// usamos el algoritmo Thrust para el ordenamiento en gpu
 void sort_gpu(std::vector<int>& array) {
     thrust::device_vector<int> d_array(array.begin(), array.end());
     thrust::sort(d_array.begin(), d_array.end());
@@ -70,8 +73,8 @@ void sort_gpu(std::vector<int>& array) {
 }
 
 int main(int argc, char *argv[]) {
-    if (argc < 4) {
-        std::cerr << "Uso: ./prog <n> <modo> <nt>\n";
+    if (argc < 4 || argc > 4) {
+        std::cerr << "Ejecutar como: ./prog <n> <modo: 0 =CPU; 1=GPU> <nt>\n";
         return EXIT_FAILURE;
     }
 
