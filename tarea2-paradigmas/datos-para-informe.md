@@ -1,4 +1,11 @@
-# informe de Gráficos de Rendimiento y Eficiencia (todo esto es experimental a lo que hay que decir, edita esto luis)
+
+# Algoritmos utilizados para las arquitecturas:
+
+    1.CPU= Merge sort paralelo utilizando  OpenMP(paralelismo de nivel de hilos)
+    2.GPU= Thrust sort
+
+
+# informe de Gráficos de Rendimiento y Eficiencia (todo esto es experimental a lo que hay que dar)
 1. Speedup vs. Número de Hilos (CPU)
 Descripción: El gráfico muestra cómo mejora el rendimiento (speedup) al incrementar el número de hilos en la CPU. Se incluyen resultados para configuraciones de 4 y 8 hilos comparados con 1 hilo (baseline).
 
