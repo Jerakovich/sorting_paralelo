@@ -7,7 +7,7 @@ n_values = [2**20, 2**22, 2**24, 2**26, 2**28]  # Tamaños del array
 cpu_times_1_thread = [0.39254, 1.5886, 6.50969, 26.6334, 106.516]  # Tiempos con 1 hilo ===> ./prog $((2**x)) 0 1
 cpu_times_4_threads = [0.491174,0.958282,3.83568,15.9351, 67.8596]  # Tiempos con 4 hilos ===> ./prog $((2**x)) 0 4
 cpu_times_8_threads = [0.235169, 0.966208, 3.93584, 15.7743, 73.9135]  # Tiempos con 8 hilos ===> ./prog $((2**x)) 0 8
-gpu_times = [1.29582,1.32975, 1.3563, 1.52851, 2.11553]  # Tiempos en GPU ===> ./prog $((2**x)) 1 0
+gpu_times = [1.29582,1.32975, 1.3563, 1.52851, 5.02381]  # Tiempos en GPU ===> ./prog $((2**x)) 1 0
 std_sort_times = [0.373016,1.73381,7.11328,29.9326,128.909]  # Tiempos de std::sort
 
 # Gráfico 1: Tiempo vs Tamaño del Array del cpu y gpu
